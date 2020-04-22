@@ -10,7 +10,7 @@
     </properties>
 
     <groupId>com.mariiapasichna</groupId>
-    <artifactId>Lesson24</artifactId>
+    <artifactId>Lesson_24_JerseyServerDataBaseH2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

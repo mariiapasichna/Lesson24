@@ -29,7 +29,7 @@ public class DataBaseApi {
         userDao.addUser(user);
         List<User> users = userDao.getUser(user.getId());
         if (users.size() != 0) {
-            String resultJson = "{\"id\": " + user.getId() + "}";
+            String resultJson = "{\"result\": \"add success\"}";
             return Response.status(Response.Status.OK).entity(resultJson).build();
         } else {
             String resultJson = "{\"result\": \"failed to save user\"}";
