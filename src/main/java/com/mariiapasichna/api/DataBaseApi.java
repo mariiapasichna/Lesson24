@@ -26,13 +26,12 @@ public class DataBaseApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(String json) {
         User user = UserUtil.fromJson(json);
-        userDao.addUser(user);
-        List<User> users = userDao.getUser(user.getId());
-        if (users.size() != 0) {
-            String resultJson = "{\"result\": \"add success\"}";
+        User saveUser = userDao.addUser(user);
+        if (saveUser.getId() != 0) {
+            String resultJson = "{\"result\": \"success\"}";
             return Response.status(Response.Status.OK).entity(resultJson).build();
         } else {
-            String resultJson = "{\"result\": \"failed to save user\"}";
+            String resultJson = "{\"result\": \"failed\"}";
             return Response.status(Response.Status.BAD_REQUEST).entity(resultJson).build();
         }
     }
@@ -82,7 +81,7 @@ public class DataBaseApi {
     public Response deleteUser(String json) {
         User user = UserUtil.fromJson(json);
         if (userDao.deleteUser(user) != 0) {
-            String resultJson = "{\"id\": " + user.getId() + "}";
+            String resultJson = "{\"result\": \"success\"}";
             return Response.status(Response.Status.OK).entity(resultJson).build();
         } else {
             String resultJson = "{\"result\": \"user not found\"}";
