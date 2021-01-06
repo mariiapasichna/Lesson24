@@ -1,6 +1,6 @@
-## Task:
+## REST service:
 
-Implement a full set of CRUD operations for user in JSON format with saving to H2 database:
+Simple REST service for practice with Hibernate. Implement a full set of CRUD operations for user in JSON format with saving to H2 database:
 - create;
 - delete;
 - update;
@@ -14,7 +14,7 @@ The server should return:
 - Status: 400 BAD_REQUEST, response in JSON format `"{"result":"failed"}"` if operation is failed;
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database we send POST request and body in JSON format:
+At the url: /database we send POST request and body in JSON format:
 
 `{
       "name": "Alex",
@@ -33,7 +33,7 @@ The server should return:
 - Status: 200 OK and list of users in JSON format
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database we send GET request
+At the url: /database we send GET request
 
 We get the list of users in JSON format:
 
@@ -50,7 +50,7 @@ The server should return:
 - Status: 404 NOT_FOUND and response in JSON format `"{"result":"user not found"}"` if user with such id was not found;
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database/1 we send GET request
+At the url: /database/1 we send GET request
 
 We get the user in JSON format:
 
@@ -67,7 +67,7 @@ The server should return:
 - Status: 404 NOT_FOUND, response in JSON format `"{"result":"user not found"}"` if user with such id was not found;
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database we send PUT request and body in JSON format:
+At the url: /database we send PUT request and body in JSON format:
 
 `{
     "id": 1,
@@ -90,7 +90,7 @@ The server should return:
 - Status: 404 NOT_FOUND, response in JSON format `"{"result":"user not found"}"` if user with such id was not found;
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database we send DELETE request and body in JSON format:
+At the url: /database we send DELETE request and body in JSON format:
 
 `{
     "id": 1,
@@ -110,7 +110,7 @@ The server should return:
 - Status: 200 OK, response in JSON format `"{"result": number of deleted users}"` and delete all users from H2 database
 
 #### Example:
-At the url http://164.68.101.149:12345/Lesson_24_mariiapasichna/database/clear we send DELETE request
+At the url: /database/clear we send DELETE request
 
 Get JSON:
 
