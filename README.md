@@ -1,6 +1,6 @@
 ## REST service:
 
-Simple REST service for practice with Hibernate. Implement a full set of CRUD operations for user in JSON format with saving to H2 database:
+Simple REST service for practice with Hibernate. Implemented a full set of CRUD operations for user in JSON format with saving to H2 database:
 - create;
 - delete;
 - update;
